@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 
 const IMAGES = [
   "/hero/hero-1.jpg",
@@ -30,17 +29,6 @@ export default function HeroSection() {
           priority
           className="object-cover"
         />
-
-        {/* Reserve button (overlay) */}
-        <div className="absolute bottom-6 right-6">
-          <Button
-            variant="mint"
-            size="lg"
-            className="rounded-full px-8 shadow-md"
-          >
-            ご予約はこちら
-          </Button>
-        </div>
 
         {/* Carousel controls */}
         <div className="absolute bottom-6 left-6 flex items-center gap-3 text-white text-sm">
