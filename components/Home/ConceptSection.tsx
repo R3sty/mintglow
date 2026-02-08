@@ -1,7 +1,7 @@
 export default function ConceptSection() {
   return (
     <section className="mx-auto max-w-3xl px-4 py-16 text-center">
-      <h2 className="mb-6 text-2xl font-medium tracking-wide">
+      <h2 className="mb-6 text-2xl font-medium tracking-wide text-[#ADD0B3]">
         コンセプト
       </h2>
 

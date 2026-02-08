@@ -11,26 +11,40 @@ export default function Footer() {
         <div>
           <Logo />
           <p className="mt-4 text-xs leading-relaxed">
-            大阪・堀江にある大人かわいいネイルサロン。<br />
-            指先から日常に、やさしい輝きを。
+            ネイル＆アイラッシュサロン<br />
+            Mint Glow Nail Salon
           </p>
         </div>
 
         {/* Salon info */}
         <div className="text-xs leading-relaxed">
           <p className="mb-2 font-medium">サロン情報</p>
-          <p>〒000-0000 大阪府〇〇区〇〇町1-2-3</p>
-          <p>営業時間：10:00 – 20:00</p>
-          <p>定休日：不定休</p>
 
-          <div className="mt-3">
+          <p className="mt-2">
+            住所<br />
+            〒266-0033<br />
+            千葉県千葉市緑区おゆみ野<br />
+            3丁目13−9 アプロード301
+          </p>
+
+          <p className="mt-3">
+            電話番号<br />
+            <a
+              href="tel:09043160789"
+              className="hover:underline"
+            >
+              090-4316-0789
+            </a>
+          </p>
+
+          <div className="mt-4">
             <Button
               variant="mintOutline"
               size="sm"
               asChild
             >
               <a
-                href="https://maps.google.com"
+                href="https://maps.app.goo.gl/5BB8abUMRv41jb6A6"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -40,19 +54,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* CTA / links */}
+        {/* Contact / links */}
         <div className="flex flex-col gap-3 md:items-end">
-          {/* <Button
-            variant="mint"
-            size="lg"
-            className="rounded-full px-8"
-            asChild
-          >
-            <Link href="/reserve">
-              ご予約はこちら
-            </Link>
-          </Button> */}
-
           <Button
             variant="mintOutline"
             size="sm"
@@ -69,10 +72,7 @@ export default function Footer() {
               Instagram
             </Link>
             <Link href="#" className="hover:underline">
-              Facebook
-            </Link>
-            <Link href="/blog" className="hover:underline">
-              Blog
+              LINE
             </Link>
           </div>
         </div>
