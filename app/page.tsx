@@ -3,6 +3,7 @@ import ConceptSection from "@/components/Home/ConceptSection";
 import MenuGridSection from "@/components/Home/MenuGridSection";
 import PhilosophySection from "@/components/Home/PhilosophySection";
 import InfoCardsSection from "@/components/Home/InfoCardsSection";
+import WebCoupon from "@/components/WebCoupon";
 
 export default function Page() {
   return (
@@ -12,6 +13,7 @@ export default function Page() {
       <MenuGridSection />
       <PhilosophySection />
       <InfoCardsSection />
+      <WebCoupon />
     </>
   );
 }
