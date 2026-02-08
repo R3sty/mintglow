@@ -68,10 +68,10 @@ export default function Footer() {
           </Button>
 
           <div className="mt-3 flex gap-4 text-xs">
-            <Link href="#" className="hover:underline">
+            <Link href="https://www.instagram.com/mint_glow_beautysalon" className="hover:underline">
               Instagram
             </Link>
-            <Link href="#" className="hover:underline">
+            <Link href="https://lin.ee/oJhdiAQ" className="hover:underline">
               LINE
             </Link>
           </div>
