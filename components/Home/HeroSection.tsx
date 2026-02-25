@@ -1,16 +1,37 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const IMAGES = [
-  "/hero/hero-1.jpg",
-  "/hero/hero-2.jpg",
-  "/hero/hero-3.jpg",
+  {
+    src: "https://storage.googleapis.com/photo-portfolio/mintglow/mintglow-banner-3.png",
+    mobilePosition: "50% 20%",
+  },
+  {
+    src: "https://storage.googleapis.com/photo-portfolio/mintglow/mintglow-banner-1.png",
+    mobilePosition: "50% 25%",
+  },
+  {
+    src: "https://storage.googleapis.com/photo-portfolio/mintglow/mintglow-banner-2.png",
+    mobilePosition: "50% 30%",
+  },
+  {
+    src: "https://storage.googleapis.com/photo-portfolio/mintglow/mintglow-banner-4.png",
+    mobilePosition: "50% 20%",
+  },
 ];
 
 export default function HeroSection() {
   const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((i) => (i === IMAGES.length - 1 ? 0 : i + 1));
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const prev = () =>
     setIndex((i) => (i === 0 ? IMAGES.length - 1 : i - 1));
@@ -20,17 +41,18 @@ export default function HeroSection() {
 
   return (
     <section className="relative w-full overflow-hidden">
-      {/* Image carousel */}
       <div className="relative h-[70vh] md:h-[80vh] w-full">
         <Image
-          src={IMAGES[index]}
-          alt="grace nail factory"
+          src={IMAGES[index].src}
+          alt="Mint Glow Nail Salon"
           fill
           priority
-          className="object-cover"
+          sizes="100vw"
+          unoptimized
+          className="object-cover md:object-center"
+          style={{ objectPosition: IMAGES[index].mobilePosition }}
         />
 
-        {/* Carousel controls */}
         <div className="absolute bottom-6 left-6 flex items-center gap-3 text-white text-sm">
           <button
             onClick={prev}

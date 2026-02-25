@@ -3,23 +3,23 @@ import Image from "next/image";
 
 const ITEMS = [
   {
-    label: "コンセプト",
-    href: "/concept",
+    label: "クーポン",
+    href: "/pages/coupons",
     image: "/menu/concept.jpg",
   },
   {
     label: "料金",
-    href: "/price",
+    href: "/pages/price",
     image: "/menu/price.jpg",
   },
   {
     label: "ギャラリー",
-    href: "/gallery",
+    href: "/pages/gallery",
     image: "/menu/gallery.jpg",
   },
   {
     label: "アクセス",
-    href: "/access",
+    href: "/pages/access",
     image: "/menu/access.jpg",
   },
 ];

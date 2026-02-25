@@ -13,22 +13,34 @@ export default function PriceMenu() {
               <h2 className="text-2xl font-medium tracking-wide">
                 {section.title}
               </h2>
-              <p className="mt-1 text-sm text-zinc-500">
-                {section.subtitle}
-              </p>
             </div>
 
             {/* ===== Price List ===== */}
-            <ul className="space-y-4 text-sm">
+            <ul className="space-y-6 text-sm">
               {section.items.map((item) => (
                 <li
                   key={item.name}
-                  className="flex items-start justify-between gap-6 border-b border-zinc-200 pb-2"
+                  className="border-b border-zinc-200 pb-4"
                 >
-                  <span>{item.name}</span>
-                  <span className="whitespace-nowrap font-medium">
-                    {item.price}
-                  </span>
+                  <div className="flex items-start justify-between gap-6">
+                    <div>
+                      <p className="font-medium">{item.name}</p>
+                      {(() => {
+                        const desc =
+                          (item as any).description ??
+                          (item as any).desc ??
+                          (item as any).subtitle
+                        return desc ? (
+                          <p className="mt-1 text-xs leading-relaxed text-zinc-500">
+                            {desc}
+                          </p>
+                        ) : null
+                      })()}
+                    </div>
+                    <span className="whitespace-nowrap font-medium">
+                      {item.price}
+                    </span>
+                  </div>
                 </li>
               ))}
             </ul>
