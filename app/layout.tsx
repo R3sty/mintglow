@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 };
 
 const notoSansJP = Noto_Sans_JP({
-  subsets: ["latin", "japanese"],
+  subsets: ["latin"],
   weight: ["400", "500", "700"],
   variable: "--font-sans",
   display: "swap",
