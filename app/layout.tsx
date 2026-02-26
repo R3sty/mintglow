@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 };
 
 const notoSansJP = Noto_Sans_JP({
-  subsets: ["latin"], 
+  subsets: ["latin", "japanese"],
   weight: ["400", "500", "700"],
   variable: "--font-sans",
   display: "swap",
@@ -50,7 +50,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" className={notoSansJP.variable}>
-      <body className="antialiased">
+      <body className={`${notoSansJP.className} antialiased`}>
         <Navbar />
         <main className="pt-16">{children}</main>
         <FloatingReserveButton />
